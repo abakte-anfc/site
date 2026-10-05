@@ -1,0 +1,11 @@
+@import "tailwindcss/theme.css";
+@import "tailwindcss/utilities.css" source(none);
+@config "../../tailwind.config.cjs";
+@source "../../components";
+.feature-carousel { --ui-background:0 0% 14%; --ui-foreground:0 0% 100%; --ui-muted-foreground:0 0% 85%; --ui-input:0 0% 70%; --ui-ring:0 0% 100%; --ui-accent:0 0% 25%; --ui-accent-foreground:0 0% 100%; --ui-primary:0 0% 100%; --ui-primary-foreground:0 0% 14%; --ui-secondary:0 0% 25%; --ui-secondary-foreground:0 0% 100%; --ui-destructive:0 65% 45%; --ui-destructive-foreground:0 0% 100%; }
+.feature-carousel button {cursor:pointer;}
+.feature-carousel button:disabled {cursor:default;}
+.feature-carousel:focus-visible {outline:3px solid white;outline-offset:-3px;}
+[data-gallery-enhancement] {position:relative;min-width:0;}
+.feature-carousel-mount:not(.is-ready) {position:absolute;inset:0;visibility:hidden;pointer-events:none;}
+.feature-caption {min-height:3em;}

@@ -1,0 +1,73 @@
+[
+  {
+    "name": "hero",
+    "source": "fotos\\SaveClip.App_837799049_17918316300450264_6048353843790412643_n.jpg",
+    "alt": "Dançarina em cena, com um tecido claro suspenso no ar.",
+    "width": 1357,
+    "height": 1809
+  },
+  {
+    "name": "sobre",
+    "source": "fotos\\SaveClip.App_831354644_18627005596001076_305114286403415780_n.jpg",
+    "alt": "Dançarina de braços abertos sob a iluminação do palco.",
+    "width": 3072,
+    "height": 4096
+  },
+  {
+    "name": "registro-01",
+    "source": "fotos\\SaveClip.App_831021536_17918201448450264_2920325458647488368_n.jpg",
+    "alt": "Bailarinas em movimento com saias claras no palco.",
+    "width": 2048,
+    "height": 2726
+  },
+  {
+    "name": "registro-02",
+    "source": "fotos\\SaveClip.App_833261590_17918316090450264_2628823931416909465_n.jpg",
+    "alt": "Grupo de bailarinas de figurino azul com os braços elevados.",
+    "width": 2048,
+    "height": 2730
+  },
+  {
+    "name": "registro-03",
+    "source": "fotos\\SaveClip.App_834237716_17918316081450264_1129887427467452676_n.jpg",
+    "alt": "Grupo em uma composição de dança sob a luz do palco.",
+    "width": 2048,
+    "height": 2730
+  },
+  {
+    "name": "registro-04",
+    "source": "fotos\\SaveClip.App_834284736_17918201337450264_6637435143675639029_n.jpg",
+    "alt": "Bailarino em um movimento próximo ao chão, em fotografia preto e branco.",
+    "width": 1410,
+    "height": 1879
+  },
+  {
+    "name": "registro-05",
+    "source": "fotos\\SaveClip.App_834902906_17918316036450264_8612957376785844329_n.jpg",
+    "alt": "Artistas em uma composição coletiva no palco.",
+    "width": 2048,
+    "height": 2730
+  },
+  {
+    "name": "registro-06",
+    "source": "fotos\\SaveClip.App_836834494_18627005572001076_5489327147284357001_n.jpg",
+    "alt": "Dançarina ajoelhada com os braços abertos sob luz quente.",
+    "width": 3072,
+    "height": 4096
+  },
+  {
+    "name": "encontro",
+    "source": "videos\\snapinsta-1791157436933.mp4",
+    "time": "00:03",
+    "alt": "Três pessoas sentadas juntas, observando fotografias em um celular.",
+    "width": 720,
+    "height": 1280
+  },
+  {
+    "name": "registro-movimento",
+    "source": "videos\\snapinsta-1791157666077.mp4",
+    "start": "00:03",
+    "duration": 15,
+    "audio": "Trecho preparado sem áudio; original preservado."
+  }
+]

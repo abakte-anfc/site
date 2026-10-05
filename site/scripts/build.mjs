@@ -1,0 +1,23 @@
+import postcss from 'postcss';
+import tailwind from '@tailwindcss/postcss';
+import autoprefixer from 'autoprefixer';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { build } from 'esbuild';
+const site = path.resolve(import.meta.dirname,'..');
+const dist = path.join(site,'dist');
+await fs.mkdir(dist,{recursive:true});
+const generated = path.resolve(dist, 'js');
+if (path.dirname(generated) !== dist) throw new Error('Diretório de saída inválido.');
+await fs.rm(generated, {recursive:true, force:true});
+for(const file of ['index.html','styles.css','app.js']) await fs.copyFile(path.join(site,'src',file),path.join(dist,file));
+await fs.cp(path.join(site,'assets'),path.join(dist,'assets'),{recursive:true});
+await fs.mkdir(path.join(dist,'licenses'),{recursive:true});
+await fs.copyFile(path.join(site,'src/components/ReactBits-LICENSE.md'),path.join(dist,'licenses/ReactBits-LICENSE.md'));
+for (const dependency of ['react','react-dom']) await fs.copyFile(path.resolve(site,'../node_modules',dependency,'LICENSE'),path.join(dist,'licenses',dependency+'-LICENSE.txt'));
+await build({entryPoints:[path.join(site,'src/gallery-entry.js'),path.join(site,'src/services-entry.js')],outdir:path.join(dist,'js'),bundle:true,splitting:true,format:'esm',minify:true,jsx:'automatic',target:['es2020'],define:{'process.env.NODE_ENV':'"production"'}});
+console.log('Build estático com ilha React concluído em site/dist.');
+
+const css=await fs.readFile(path.join(site,'src/gallery-tailwind.css'),'utf8');
+const result=await postcss([tailwind(),autoprefixer]).process(css,{from:path.join(site,'src/gallery-tailwind.css')});
+await fs.writeFile(path.join(dist,'js/gallery-entry.css'),result.css);

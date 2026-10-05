@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://www.instagram.com/estudiorealizarte/",
+    "status": 200,
+    "redirect": "https://www.instagram.com/estudiorealizarte/"
+  },
+  {
+    "url": "https://wa.me/5575999888433",
+    "status": 200,
+    "redirect": "https://api.whatsapp.com/send/?phone=5575999888433&text&type=phone_number&app_absent=0"
+  },
+  {
+    "url": "https://www.google.com/maps/search/?api=1&query=Rua%20S%C3%A3o%20Domingos%201040%20Feira%20de%20Santana%20BA",
+    "status": 200,
+    "redirect": "https://www.google.com/maps/search/?api=1&query=Rua%20S%C3%A3o%20Domingos%201040%20Feira%20de%20Santana%20BA"
+  }
+]
