@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -63,7 +63,6 @@ export const HeroSection = React.forwardRef<HTMLDivElement, HeroProps>(
     <Button variant="outline" size="icon" aria-label="Próxima foto" className="absolute right-0 sm:right-8 top-1/2 -translate-y-1/2 rounded-full z-20 bg-background/90 backdrop-blur-sm" onClick={()=>navigate(1)}><ChevronRight className="h-5 w-5"/></Button>
    </div>
    <p className="feature-caption text-sm text-foreground" aria-live={paused||focused?'polite':'off'} aria-atomic="true">{images[currentIndex]?.title} <span className="block mt-2">{currentIndex+1} de {images.length}</span></p>
-   <Button variant="outline" onClick={()=>setPaused(p=>!p)} disabled={reduced} aria-label={paused||reduced?'Reproduzir carrossel':'Pausar carrossel'}>{paused||reduced?<Play className="mr-2 h-4 w-4"/>:<Pause className="mr-2 h-4 w-4"/>}{reduced?'Movimento reduzido':paused?'Reproduzir':'Pausar'}</Button>
   </div>
  </div>;
 });
