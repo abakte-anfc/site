@@ -28,27 +28,6 @@
     });
     mobile.addEventListener('change', () => { menu.hidden = !mobile.matches; setOpen(false); });
   }
-  const video = document.querySelector('#video-registro');
-  const start = document.querySelector('[data-video-start]');
-  if (video && start) {
-    start.hidden = false;
-    video.controls = false;
-    start.addEventListener('click', async () => {
-      video.src = video.dataset.source;
-      video.controls = true;
-      start.hidden = true;
-      video.focus();
-      try { await video.play(); } catch { /* Controles nativos permitem tentar novamente. */ }
-    }, { once: true });
-    video.addEventListener('error', () => {
-      const fallback = document.createElement('p');
-      const link = document.createElement('a');
-      link.href = video.dataset.source;
-      link.textContent = 'Abrir o trecho de dança';
-      fallback.append('O vídeo não pôde ser reproduzido neste navegador. ', link);
-      video.closest('figure').append(fallback);
-    }, { once: true });
-  }
 })();
 
 (() => {
