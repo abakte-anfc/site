@@ -4,3 +4,5 @@ site/qa/test-results/
 site/qa/playwright-report/
 
 site/dist/
+/fotos/
+/videos/
